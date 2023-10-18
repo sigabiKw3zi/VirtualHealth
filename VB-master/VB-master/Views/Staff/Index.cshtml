@@ -1,0 +1,539 @@
+﻿@model IEnumerable<VB.Models.Staff>
+
+@{
+    ViewData["Title"] = "Staff Portal";
+    Layout = "~/Views/_LayoutStaff.cshtml";
+}
+
+
+                         <!-- Wrapper -->
+			
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StaffID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.StaffID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.StaffID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
+
+
+<!-- banner -->
+<section class="banner-slider">
+    <div id="JiSlider" class="jislider">
+        <ul>
+            <li>
+                <div class="banner-top banner-top1">
+                    <div class="container">
+                        <div class="banner-info info2">
+                            <h3 class="text-dark">QUALITY MEDICINE</h3>
+                            <p class="text-dark">Safe, effective.</p>
+                            <img src="~/pic01.jpg" class="opacity-50"/>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="banner-top banner-top2">
+                    <div class="container">
+                        <div class="banner-info bg3 info2">
+                            <h3 class="text-dark">RELIABLE TECHNOLOGIES</h3>
+                            <p class="text-dark">Efficient, equitable.</p>
+                            <img src="~/pic03.jpg" sstyle="opacity:0.4"/>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="banner-top banner-top3">
+                    <div class="container">
+                        <div class="banner-info bg3">
+                            <h3>WELL-TRAINED WORKFORCE</h3>
+                            <p>Patient-centered, timely.</p>
+                            <img src="~/pic01.jpg" class="opacity-50"/>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- //banner -->
+<!-- banner bottom -->
+<section class="banner-btm">
+    <div class="container">
+        <div class="row banner-bottom-main">
+
+            <div class="col-md-6 banner-grid2">
+                <div class="banner-subg1">
+                    <span class="fa fa-globe" aria-hidden="true"></span>
+                    <h3 class="mt-3">Worldwide Customers</h3>
+                    <p class="mt-3 mb-3"></p>
+
+                    <div class="read-btn">
+                        <a href="~/Views/Home/About.cshtml">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 banner-grid2">
+                <div class="banner-subg1">
+                    <span class="fa fa-user" aria-hidden="true"></span>
+                    <h3 class="mt-3">Personal Manager</h3>
+                    <p class="mt-3 mb-3"></p>
+
+                    <div class="read-btn">
+                        <a href="~/Views/Home/About.cshtml">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <header class="major">
+        <h2>OUR VISION</h2>
+    </header>
+    <div class="features">
+        <article>
+            <span class="icon fa-gem"></span>
+            <div class="content">
+                <h3>Operational Growth Across Geographies</h3>
+                <p>The Virtual Health Bridge group has had strong results for the six months it has been running. It has also produced excellent operational performance in both acute and non-acute businesses- growing group revenue by 12.9% to R15.3 billion and operating profit by 13.5% to R2.7 billion.</p>
+            </div>
+        </article>
+        <article>
+            <span class="icon solid fa-procedures"></span>
+            <div class="content">
+                <h3>Nuclear Medicine Operations</h3>
+                <p>Our group continues its' South African diversitification strategy with the acquisition of TheraMed Nuclear's non-clinical imaging operations in Gauteng.</p>
+            </div>
+        </article>
+        <article>
+            <span class="icon solid fa-clinic-medical"></span>
+            <div class="content">
+                <h3>Dialysis Procedure</h3>
+                <p>We are pleased to announce that we have been entrusted by Fresenius Medical Care to take over 51 of its renal dialysis clinics to support their patients in Africa..</p>
+            </div>
+        </article>
+        <article>
+            <span class="icon solid fa-people-arrows"></span>
+            <div class="content">
+                <h3>Training Programme</h3>
+                <p>The best and brightest minds are welcome to join our team- praticularly in the fields of nursing, clinical engineering and pharmacy. This is a chance for you to fulfill your potential.</p>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- //banner bottom -->
+<section class="wthree-row w3-about py-md-5">
+    <div class="container py-4 mt-2">
+        <h3 class="tittle-w3ls text-center mb-3">MORE SERVICES</h3>
+        <p class="tit text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel ab, nesciunt quod!</p>
+        <div class="card-deck pt-4 mt-md-4">
+            <div class="card">
+                <img src="~/images/Healthcare Industry_ Dedicated Teams To Deliver Customer Success.jpeg" class="img-fluid" alt="Card image cap">
+                <div class="card-body w3ls-card">
+                    <h5 class="card-title">Preparing for the Tipping Point</h5>
+                    <p class="card-text mb-3 ">As pressure grows to push automation, boost quality of care, and decrease spending—especially in light of changing macroeconomic conditions—more healthcare stakeholders may push for virtual health platforms and find consistent success. As part of a broader strategic investment in virtual health, health systems could consider the following dimensions:</p>
+                    <div class="ab_button">
+                        <a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button" data-toggle="modal" data-target="#myModal">Read More </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/images/US Healthcare Advertising Market 2019-2024 _ Industry Trends, Share, Size, COVID-19 Impact Analysis, Growth, Demand and Opportunities.jpeg" class="img-fluid" alt="Card image cap">
+                <div class="card-body w3ls-card">
+                    <h5 class="card-title">Growth Strategy</h5>
+                    <p class="card-text mb-3 ">
+                        Consider strategies and rationale to go beyond “telehealth”/clinic visit replacement to drive growth in new markets/populations, scale other applications (for example, tele-ICU, post-acute care integration).
+
+                        Revisit service distribution/configuration and capital planning to integrate changes in needs for physical sites of care.
+                    </p>
+                    <div class="ab_button">
+                        <a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button" data-toggle="modal" data-target="#myModal">Read More </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/images/Technology for healthcare.jpeg" class="img-fluid" alt="Card image cap">
+                <div class="card-body w3ls-card">
+                    <h5 class="card-title">Innovation and Cost Structure</h5>
+                    <p class="card-text mb-3 ">
+                        Segment the patient populations (for example, specific chronic disease) and specialties whose remote interactions could be scaled with enabling home-based diagnostics and equipment.
+
+                        Re-imagine more sites of care with a “virtual first” mind-set and accelerate sites of care experimentation (for example, HaH enabled by remote monitoring). This model of care can inform a new digitally driven capital plan and service delivery models that could achieve significant reductions to current cost structure.
+                    </p>
+                    <div class="ab_button">
+                        <a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button" data-toggle="modal" data-target="#myModal">Read More </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- testimonials -->
+<section class="testimonials py-md-5">
+    <div class="container py-4 mt-2">
+        <h3 class="title-w3ls text-center mb-3 text-white">Patient Feedback</h3>
+        <p class="tit text-center mx-auto text-white">Display some of the feedback we receive from users here.</p>
+
+        <div class="w3_agileits_testimonial_grids pt-4 mt-md-4">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="w3_agileits_testimonial_grid">
+                                <div class="test-bg-w3ls">
+                                    <h4>Ema Wayans <span>Architect</span></h4>
+                                    <p>
+                                        opinion on our service providers
+                                    </p>
+                                </div>
+                                <img src="~/ts1.jpg" alt=" " class="img-responsive" />
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="w3_agileits_testimonial_grid">
+                                <div class="test-bg-w3ls">
+                                    <h4>Mark Rosy <span>Private School Teacher</span></h4>
+                                    <p>
+                                        comment on affordability of prescriptions and appointments
+                                    </p>
+                                </div>
+                                <img src="~/ts2.jpg" alt=" " class="img-responsive" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="w3_agileits_testimonial_grid">
+                                <div class="test-bg-w3ls">
+                                    <h4>Mario Andretti <span>Accountant working at certain firm</span></h4>
+                                    <p>
+                                        fast-responding 
+                                    </p>
+                                </div>
+                                <img src="~/ts3.jpg" alt=" " class="img-responsive" />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+<!-- //testimonials -->
+<!-- smooth-shipping -->
+<section class="ser-btm py-md-5">
+    <div class="container py-4 mt-2">
+        <h3 class="tittle-w3ls text-center mb-3">OUR SERVICES</h3>
+        <p class="tit text-center mx-auto">We are here to offer a broad range of inpatient healthcare services worldwide!</p>
+        <div class="row banner-bottom-main pt-4 mt-md-4">
+
+            <div class="col-md-4 banner-grid2">
+                <div class="banner-subg1">
+                    <span class="fa fa-globe" aria-hidden="true"></span>
+                    <h3 class="mt-3">Consumer Experience and Outcomes</h3>
+                    <p class="mt-3 mb-3">Accelerate development of an overall consumer-focused digital “front door” that provides patients with a seamless digital channel to access their providers, considering what the integrated product will cover beyond what currently exists (for example, finding a doctor, record access, scheduling in-person visits) and integrated with what may have been put in place in response to COVID-19 (for example, e-triage, scheduling virtual visits, virtual clinic visits).</p>
+
+                    <div class="read-btn">
+                        <a href="~/Views/Home/About.cshtml">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 banner-grid2">
+                <div class="banner-subg1">
+                    <span class="fa fa-signal" aria-hidden="true"></span>
+                    <h3 class="mt-3">Physician Alignment</h3>
+                    <p class="mt-3 mb-3">Build the capabilities and incentives of the provider workforce to support virtual care (for example, workflow design, continuing education and graduate medical education); align benefit structure to drive adoption in line with health system and/or physician practice economics.</p>
+
+                    <div class="read-btn">
+                        <a href="~/Views/Home/About.cshtml">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 banner-grid2">
+                <div class="banner-subg1">
+                    <span class="fa fa-money-bill" aria-hidden="true"></span>
+                    <h3 class="mt-3">Technology Infrastructure</h3>
+                    <p class="mt-3 mb-3">Take stock of virtual applications, interoperability with systems of engagement (for example, electronic health record, revenue cycle, digital front door) and supporting infrastructure. Define approach to move from COVID-19 rapid solutions to a sustainable, secure, integrated virtual health platform.</p>
+
+                    <div class="read-btn">
+                        <a href="~/Views/Home/About.cshtml">More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //smooth-shipping -->
+<!-- distance -->
+<section class="distance-w3 py-md-5">
+    <div class="container py-4 mt-2">
+        <div class="row">
+            <div class="col-md-8 distance-agile-left">
+                <h4 class="mt-2">Connecting Health, Bridging Lives!</h4>
+            </div>
+            <div class="col-md-4 distance-agile-right">
+                <a href="~/Views/Home/Contact.cshtml">call us 5-367-123-4567</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //distance -->
+<!-- stats -->
+<section class="stats py-md-5">
+    <div class="container py-4 mt-2">
+        <h3 class="tittle-w3ls text-center mb-3">Our Stats</h3>
+        <p class="tit text-center mx-auto">A quick rundown on our data.</p>
+        <div class="row inner_w3l_agile_grids-1 pt-4 mt-md-4">
+            <div class="col-sm-4 w3layouts_stats_left w3_counter_grid">
+                <p class="counter">1,546</p>
+                <h3>Satisfied Clients</h3>
+                <h6>Pure satisfaction</h6>
+            </div>
+            <div class="col-sm-4 w3layouts_stats_left w3_counter_grid1">
+
+                <p class="counter">14,345</p>
+                <h3>Successful Treatment</h3>
+                <h6>Delivery</h6>
+            </div>
+            <div class="col-sm-4 w3layouts_stats_left w3_counter_grid2">
+
+                <p class="counter">563</p>
+                <h3>Branches Worldwide</h3>
+                <h6>Highest level of credibility</h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- //stats -->
+<!-- Modal -->
+
+
+@*<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+
+									<ul>
+										
+										<li>@Html.ActionLink("Home Page", "Index", "Staff", new { @class = "nav-link" })</li>
+										<li>@Html.ActionLink("About Us", "About", "Home", new { @class = "nav-link" })</li>	
+										<li>
+											<span class="opener">Admin</span>
+											<ul>
+                                                <li>@Html.ActionLink("Dashboard", "Index","Staff",new{@class = "nav-link" })</li>
+												<li>@Html.ActionLink("Accounts", "Index", "VirtualAccount", new { @class = "nav-link" })</li>
+												<li>@Html.ActionLink("Roles", "Index","AppRole",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Management", "Index","Staff",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Reports", "Index","Staff",new{@class = "nav-link" })</li>
+											</ul>
+
+										</li>
+                                        <li>
+											<span class="opener">Doctor</span>
+											<ul>
+												<li>@Html.ActionLink("Dashboard", "Index", "Doctor", new { @class = "nav-link" })</li>@*will include diff occupations*@
+                                                @*<li>@Html.ActionLink("Referral Form", "Referral","Doctor",new{@class = "nav-link" })</li>
+												<li>@Html.ActionLink("Schedule", "Schedule","Doctor",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Sick Leave", "Leave","Doctor",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Members", "Index","Doctor",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Chat", "Index","Doctor",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Tasks", "Index","Doctor",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Settings", "Index","Doctor",new{@class = "nav-link" })</li>
+											</ul>
+
+										</li>
+                                        <li>@Html.ActionLink("Referral", "Referral","Staff",new{@class = "nav-link" })</li>
+                                        <li>
+											<span class="opener">Specialist</span>
+											<ul>
+												<li>@Html.ActionLink("Dashboard", "Index", "Specialist", new { @class = "nav-link" })</li>@*will include diff occupations*@
+												@*<li>@Html.ActionLink("Members", "Index","Specialist",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Chat", "Index","Specialist",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Tasks", "Index","Specialist",new{@class = "nav-link" })</li>
+                                                <li>@Html.ActionLink("Settings", "Index","Specialist",new{@class = "nav-link" })</li>
+											</ul>
+
+										</li>
+
+										<li>@Html.ActionLink("Services", "Services", "Home", new { @class = "nav-link" })</li>
+										<li>@Html.ActionLink("Gallery", "Gallery", "Home", new { @class = "nav-link" })</li>
+										<li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-link" })</li>
+										
+											<li><partial name="_LoginPartial"/></li>
+									</ul>
+
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Ante interdum</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="~/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="~/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="~/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+										<li class="icon solid fa-phone">(000) 000-0000</li>
+										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li>
+									</ul>
+								</section>
+                                </div>
+                                </div>
+						</div>
+                    *@
+<!-- //Modal -->
+<!-- js -->
+<script src="~/js/jquery-2.2.3.min.js"></script>
+<!-- //js-->
+<!--banner-slider-->
+<script src="~/js/JiSlider.js"></script>
+<script>
+
+		$(window).load(function () {
+			$('#JiSlider').JiSlider({
+				color: '#fff',
+				start: 1,
+				reverse: false
+			}).addClass('ff')
+		})
+</script>
+<!-- //banner-slider -->
+<!-- flexSlider -->
+<script defer src="~/js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+</script>
+<!-- //flexSlider -->
+<!-- start-smooth-scrolling -->
+<script src="~/js/move-top.js"></script>
+<script src="~/js/easing.js"></script>
+<script>
+
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+</script>
+<!-- //end-smooth-scrolling -->
+<!-- stats -->
+<script src="~/js/jquery.waypoints.min.js"></script>
+<script src="~/js/jquery.countup.js"></script>
+<script>
+			$('.counter').countUp();
+</script>
+<!-- //stats -->
+<!-- smooth-scrolling-of-move-up -->
+<script>
+
+		$(document).ready(function () {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+</script>
+<script src="~/js/SmoothScroll.min.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+	 <script src="~/js/bootstrap.js"></script>
+
+    @* <script src="~/js/jquery.min.js"></script>
+			<script src="~/js/browser.min.js"></script>
+			<script src="~/js/breakpoints.min.js"></script>
+			<script src="~/js/util.js"></script>
+			<script src="~/js/main.js"></script>*@
+

@@ -1,0 +1,172 @@
+﻿@{
+    ViewData["Title"] = "Pharmacist Manager Portal";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Your layout template
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pharmacist Manager Portal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <section>
+        <header class="main">
+            <h1 class="underlined-heading">Pharmacist Manager Portal</h1>
+            <p>Welcome to the Pharmacist Manager portal. You can process applications and manage medication picking here.</p>
+        </header>
+
+        <div class="content">
+            <h2 class="underlined-heading">Chronic Mediation Applications</h2>
+            <details>
+                <summary>View Chronic Applications</summary>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application ID</th>
+                            <th>Patient Name</th>
+                            <th>Medications</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>102939</td>
+                            <td>Milisa Goerge</td>
+                            <td>Penicillin, Strepsils</td>
+                            <td>
+                                <button class="approve-button">Approve</button>
+                                <button class="decline-button">Decline</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>102940</td>
+                            <td>Albert Dinga</td>
+                            <td>Mybullen, Sinotab</td>
+                            <td>
+                                <button class="approve-button">Approve</button>
+                                <button class="decline-button">Decline</button>
+                            </td>
+                        </tr>
+
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </details>
+        </div>
+
+        <div class="content">
+            <h2 class="underlined-heading">Approved Applications</h2>
+            <details>
+                <summary>View Approved Applications</summary>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application ID</th>
+                            <th>Patient Name</th>
+                            <th>Medications</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>123457</td>
+                            <td>Anathi Dukuza</td>
+                            <td>Oractane 40gm, Panado</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </details>
+        </div>
+
+        <div class="content">
+            <h2 class="underlined-heading">Not Approved Applications</h2>
+            <details>
+                <summary>View Not Approved Applications</summary>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application ID</th>
+                            <th>Patient Name</th>
+                            <th>Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>190234</td>
+                            <td>Alice Johnson</td>
+                            <td>Insufficient information</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </details>
+        </div>
+
+        <h2>Medication Tracking</h2>
+
+  
+
+
+        <!-- Other sections for medication picking and tracking -->
+
+        <ul class="actions">
+            <li><a href="#" class="button big">Log Out</a></li>
+        </ul>
+    </section>
+</body>
+</html>
+
+<style>
+    .underlined-heading {
+        text-decoration: underline;
+    }
+
+    .content {
+        margin: 20px 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .approve-button, .decline-button {
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .actions {
+        text-align: right;
+    }
+
+    details {
+        cursor: pointer;
+        border: 1px solid #ddd;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    summary {
+        outline: none;
+    }
+</style>

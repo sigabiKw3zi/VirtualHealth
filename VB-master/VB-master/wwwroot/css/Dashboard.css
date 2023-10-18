@@ -1,0 +1,34 @@
+﻿/*a:hover {
+    color: hotpink;
+    background-color:cornflowerblue;
+    border:dashed;
+    border-color:blueviolet;
+}*/
+ul li{
+    display:inline-block;
+    margin-right:40px;
+    border:thin;
+    border-radius: 5px 5px;
+}
+.Icon-list:hover {
+    background-color: aquamarine;
+}
+.ico{
+    position:center;
+}
+header p {
+    /*background-image: url(doctor-hospital-professional-people-health-care-services-people-doctor-hospital-professional-people-health-care-services-people-122264905.jpg);
+   
+    height:400px;*/
+    text-align: center;
+    /*background-image: url(Icons/matheus-ferrero-yfmjALh1S6s-unsplash.jpg);*/
+    /*height:1000px;
+    width:2000px;*/
+
+} 
+body{
+    /*background-image:url(Icons/matheus-ferrero-yfmjALh1S6s-unsplash.jpg);*/
+    
+}
+
+

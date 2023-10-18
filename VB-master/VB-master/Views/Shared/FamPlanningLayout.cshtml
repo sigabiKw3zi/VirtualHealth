@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - VitualHealthApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/assets/css/main.css" asp-append-version="true" />
+
+    @* <link rel="stylesheet" href="~/VitualHealthApp.styles.css" asp-append-version="true" />*@
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-danger border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VitualHealthApp</a>*@
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <img src="~/css/vhealth1.png" class="img-thumbnail" alt="" width="7%">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-link text-dark" asp-area="" asp-controller="Home" asp-action="">Who We Serve</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-link text-dark" asp-area="" asp-controller="Home" asp-action="">Our Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-link text-dark" asp-area="" asp-controller="Home" asp-action="">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <partial name="_LoginPartial" />
+            </div>
+        </nav>
+    </header>
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <header id="header">
+                    @*<img src="~/css/vhealth2.png" class="img-thumbnail" alt="" width="15%" >*@
+                    @*<a href="index.html" class="logo"><strong>vHealthApp</strong> by 5th element </a>*@
+                    @* <img src="~/css/VHB-Logo.png" max-width: 100% />*@
+                    <ul class="icons">
+                        <li><a href="https://twitter.com/explore" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="https://www.facebook.com/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://accounts.snapchat.com/accounts/v2/login" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                        <li><a href="https://www.instagram.com/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        @* <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>*@
+                    </ul>
+                </header>
+
+                @RenderBody()
+
+            </div>
+        </div>
+
+
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Search -->
+                <section id="search" class="alt">
+                    <form method="post" action="#">
+                        <input type="text" name="query" id="query" placeholder="Search" />
+                    </form>
+                </section>
+
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a asp-action="Index">Home</a></li>
+                        <li><a asp-action="PatientInfo">Patient Information</a></li>
+                        @*<li><a href="elements.html">Elements</a></li>*@
+                        <li>
+                            <span class="opener">Healthcare services</span>
+                            <ul>
+                                <li><a href="#">Chronic Medication</a></li>
+                                <li><a asp-action="FamilyPlanning">Family Planning</a></li>
+                                <li><a href="#">Counceling</a></li>
+                                <li><a href="#">Referals</a></li>
+                                <li><a href="#">Prenatal Care</a></li>
+                            </ul>
+                        </li>
+                        @*<li><a href="#">Etiam Dolore</a></li>
+                        <li><a href="#">Adipiscing</a></li>*@
+                        <li>
+                            <span class="opener">Our Doctors</span>
+                            <ul>
+                                <li><a href="#">General Surgeon</a></li>
+                                <li><a href="#">Dietician</a></li>
+                                <li><a href="#">Anaesthetist</a></li>
+                                <li><a href="#">Psycologist</a></li>
+                                <li><a href="#">Trauma</a></li>
+                                <li><a href="#">Dermatologist</a></li>
+                            </ul>
+                        </li>
+                        <li><a asp-action="NewOrOld">Make Emergency Appointment</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+
+
+
+                    </header>
+                    <p></p>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a href="#">virtualhealth@info.ac.za</a></li>
+                        <li class="icon solid fa-phone">(041) 504-1111</li>
+                        <li class="icon solid fa-home">
+                            Nelson Mandela University, University Way,<br />
+                            Summerstrand, Gqeberha, 6019
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer class="border-top footer text-muted">
+                    <div class="container">
+                        &copy; 2023 - VitualHealthApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+        @*        </main>
+        </div>*@
+
+    </div>
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+@*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+

@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Emergency Application";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+
+<head>
+    <title>Editorial by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <title>New Or Existing Member</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h3 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        select {
+            height: 36px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .actions {
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>EMERGENCY BOOKING</h1>
+    <h2>ARE YOU A NEW OR EXISTING MEMBER</h2>
+
+    <br />
+    @*    <img src="~/css/emergency.jpeg" class="img-thumbnail" alt="" width="50% >*@
+    <ul class="actions gap-2 col-6 mx-auto" style="text-align: center">
+        <li><a asp-action="EmApplication" class="button big">NEW APPLICANT</a></li>
+        <li><a asp-action="Form" class="button big">EXISTING MEMBER</a></li>
+    </ul>
+
+    @* <ul class="actions" style="text-align: left">
+    <li><a asp-action="Index" class="button big">EXISTING MEMBER</a></li>
+    </ul>*@
+
+
+</body>

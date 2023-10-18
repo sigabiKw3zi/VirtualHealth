@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewData["Title"] = "Gallery";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<!--Gallery-->
+<section class="gallery py-md-5">
+    <div class="container py-4 mt-2">
+        <h3 class="tittle-w3ls text-center mb-3">Gallery</h3>
+        <p class="tit text-center mx-auto">Content from our social media pages!</p>
+        <div class="row agile_gallery_grids w3-agile demo pt-4 mt-md-5">
+            <div class="col-md-4 gal-sec">
+                <div class="gallery-grid1">
+                    <a title="Therapists, psychologists" href="~/pic04.jpg">
+                        <img src="~/pic11.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>Counselling</h4>
+                            @*<p>Corporate</p>*@
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-grid1">
+                    <a title="Contraceptives" href="~/pic05.jpg">
+                        <img src="~/pic01.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>Family Planning</h4>
+                            @*<p>Corporate</p>*@
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-grid1">
+                    <a title="Professional Advice" href="~/pic10.jpg">
+                        <img src="~/pic02.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>Pre-natal Care</h4>
+                            @*<p>Corporate</p>*@
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 gal-sec">
+                <div class="gallery-grid1">
+                    <a title="Medication, prescriptions" href="~/medicine.png">
+                        <img src="~/pic03.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>Chronic Disease</h4>
+                            @*<p>Corporate</p>*@
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-grid1">
+                    <a title="Letter referrals to departments and external practitioners" href="~/referrals-icon.jpg">
+                        <img src="~/pic04.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>Referral Slip</h4>
+                            @*<p>Corporate</p>*@
+                        </div>
+                    </a>
+                </div>
+                @*<div class="gallery-grid1">
+                    <a title="Attractive home purchase offers." href="~/pic05.jpg">
+                        <img src="~/pic05.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>Shipping</h4>
+                            <p>Corporate</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 gal-sec">
+                <div class="gallery-grid1">
+                    <a title="Attractive home purchase offers." href="~/pic06.jpg">
+                        <img src="~/pic06.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>Shipping</h4>
+                            <p>Corporate</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-grid1">
+                    <a title="Attractive home purchase offers." href="~/pic07.jpg">
+                        <img src="~/pic07.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>Shipping</h4>
+                            <p>Corporate</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery-grid1">
+                    <a title="Attractive home purchase offers." href="~/pic08.jpg">
+                        <img src="~/pic08.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>Shipping</h4>
+                            <p>Corporate</p>
+                        </div>
+                    </a>
+                </div>*@
+            </div>
+        </div>
+    </div>
+</section>
+<!--//Gallery-->
+<!-- distance -->
+<section class="distance-w3 py-md-5">
+    <div class="container py-4 mt-2">
+        <div class="row">
+            <div class="col-md-8 distance-agile-left">
+                <h4 class="mt-2">Connecting Health, Bridging Lives!</h4>
+            </div>
+            <div class="col-md-4 distance-agile-right">
+                <a href="~/Views/Home/Contact.cshtml">call us 5-367-123-4567</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //distance -->
+<!-- js -->
+<script src="~/js/jquery-2.2.3.min.js"></script>
+<!-- //js-->
+<!-- start-smooth-scrolling -->
+<script src="~/js/move-top.js"></script>
+<script src="~/js/easing.js"></script>
+<script>
+
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+</script>
+<!-- //end-smooth-scrolling -->
+<!--gallery -->
+<script src="~/js/jquery.chocolat.js"></script>
+<!--light-box-files -->
+<script type="text/javascript">
+		$(function () {
+			$('.gallery-grid1 a').Chocolat();
+		});
+</script>
+<!-- //gallery -->
+<!-- smooth-scrolling-of-move-up -->
+<script>
+
+		$(document).ready(function () {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+</script>
+<script src="~/js/SmoothScroll.min.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="js/bootstrap.js"></script>
+

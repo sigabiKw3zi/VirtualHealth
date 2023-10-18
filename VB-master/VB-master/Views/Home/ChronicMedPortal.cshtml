@@ -1,0 +1,158 @@
+﻿@{
+    ViewData["Title"] = "Active Prescriptions";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Your layout page
+}
+<head>
+    <title>Editorial by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+
+<style>
+    .underlined-heading {
+        text-decoration: underline;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .content {
+        margin: 20px 0;
+    }
+
+    .actions {
+        text-align: right;
+    }
+</style>
+
+<html>
+
+<body>
+    <section>
+        <header class="main">
+            <h1 class="underlined-heading">Patient Portal</h1>
+            <p>Welcome to your patient portal. Here you can view your active prescriptions.</p>
+        </header>
+
+        <div class="content">
+            <h2 class="underlined-heading">Active Prescriptions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prescription ID</th>
+                        <th>Medication Name</th>
+                        <th>Doctor</th>
+                        <th>Issued Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>102938</td>
+                        <td>Mybullen, Penicillin</td>
+                        <td>Dr. Magigaba</td>
+                        <td>2023-08-15</td>
+                    </tr>
+                    <tr>
+                        <td>789012</td>
+                        <td>Oractane 40gm, Panado</td>
+                        <td>Dr. Gotyana</td>
+                        <td>2023-08-20</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content">
+            <h2 class="underlined-heading">Health Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Record Type</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023-08-10</td>
+                        <td>Lab Test</td>
+                        <td>Blood Test - Results: Normal</td>
+                    </tr>
+                    <tr>
+                        <td>2023-08-20</td>
+                        <td>Lab Test</td>
+                        <td>Blood pressure - Results: Normal</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+
+        <ul class="actions">
+            <li><a href="#" class="button big">Log Out</a></li>
+        </ul>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*@if (Model.Count == 0)
+{
+    <p>No active prescriptions available.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Prescription ID</th>
+                <th>Medication Name</th>
+                <th>Doctor</th>
+                <th>Issue Date</th>
+                <th>Expiration Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var prescription in Model)
+            {
+                <tr>
+                    <td>@prescription.PrescriptionId</td>
+                    <td>@prescription.MedicationName</td>
+                    <td>@prescription.DoctorName</td>
+                    <td>@prescription.IssueDate.ToShortDateString()</td>
+                    <td>@prescription.ExpirationDate.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}*@

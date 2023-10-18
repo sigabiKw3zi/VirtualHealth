@@ -1,0 +1,201 @@
+﻿@{
+    ViewData["Title"] = "SecondView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet"/>
+</head>
+<body>
+	<div id="main">
+        <div class="w3-container" style="display:flex;justify-content:space-between">
+  
+
+ 
+    <div class="col-md-4" style="width:50%;">
+           
+            @* <header class="w3-container w3-#1abc9c">
+      
+            </header>*@
+
+		<div class="w3-card-4" style="width:100vh;">
+			<div class="w3-container">
+            
+                <h1 class="text-center">Appointments</h1>
+
+                <div class="formbold-main-wrapper" style=" margin:0 auto; ">
+    
+                        <div class="formbold-form-wrapper">
+                            <form  method="POST">
+                                <div class="formbold-mb-5">
+                                    @* <label for="name" class="formbold-form-label"> Full Name </label>
+                                    <input type="text"
+                                           name="name"
+                                           id="name"
+                                           placeholder="Full Name"
+                                           class="formbold-form-input" /> *@
+                                <label for="Appointment Type"> Appointment Type</label>
+                                <select id="Appointment Type" name="Apointment Type" style=" width:100% ; padding:12px 20px; margin:8px 0;display: inline-block; border:1px solid #ccc;border-radius:4px;box-sizing:border-box">
+                                    <option value=">Ultrasound">Ultrasound</option>
+                                    <option value="Cheack up">Cheack up</option>
+                                    <option value="Nutrition">Nutrition</option>
+                                    <option value="Emergency Booking">Emergency Booking</option>
+                                    <option value="Vaccition">Vaccination</option>
+                                    <option value="Counseling">Counseling</option>
+
+
+
+                                </select>
+                                </div>
+                                <div class="formbold-mb-5">
+                                    <label for="phone" class="formbold-form-label"> Phone Number </label>
+                                    <input type="text"
+                                           name="phone"
+                                           id="phone"
+                                           placeholder="Enter your phone number"
+                                           class="formbold-form-input" />
+                                </div>
+                                <div class="formbold-mb-5">
+                                    <label for="email" class="formbold-form-label"> Allegies </label>
+                                    
+                                <textarea class="form-control" id="Allegies" name="Allegies" placeholder="List your allegies" rows="5"></textarea><br>
+                                </div>
+                                <div class="flex flex-wrap formbold--mx-3">
+                                    <div class="w-full sm:w-half formbold-px-3">
+                                        <div class="formbold-mb-5 w-full">
+                                            <label for="date" class="formbold-form-label"> Date </label>
+                                            <input type="date"
+                                                   name="date"
+                                                   id="date"
+                                                   class="formbold-form-input" />
+                                        </div>
+                                    </div>
+                                    <div class="w-full sm:w-half formbold-px-3">
+                                        <div class="formbold-mb-5">
+                                            <label for="time" class="formbold-form-label"> Time </label>
+                                            <input type="time"
+                                                   name="time"
+                                                   id="time"
+                                                   class="formbold-form-input" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="formbold-mb-5 formbold-pt-3">
+                                    <label class="formbold-form-label formbold-form-label-2">
+                                        Address Details
+                                    </label>
+                                    <div class="flex flex-wrap formbold--mx-3">
+                                        <div class="w-full sm:w-half formbold-px-3">
+                                            <div class="formbold-mb-5">
+                                                <input type="text"
+                                                       name="area"
+                                                       id="area"
+                                                       placeholder="Enter area"
+                                                       class="formbold-form-input" />
+                                            </div>
+                                        </div>
+                                        <div class="w-full sm:w-half formbold-px-3">
+                                            <div class="formbold-mb-5">
+                                                <input type="text"
+                                                       name="city"
+                                                       id="city"
+                                                       placeholder="Enter city"
+                                                       class="formbold-form-input" />
+                                            </div>
+                                        </div>
+                                        <div class="w-full sm:w-half formbold-px-3">
+                                            <div class="formbold-mb-5">
+                                                <input type="text"
+                                                       name="state"
+                                                       id="state"
+                                                       placeholder="Enter state"
+                                                       class="formbold-form-input" />
+                                            </div>
+                                        </div>
+                                        <div class="w-full sm:w-half formbold-px-3">
+                                            <div class="formbold-mb-5">
+                                                <input type="text"
+                                                       name="post-code"
+                                                       id="post-code"
+                                                       placeholder="Post Code"
+                                                       class="formbold-form-input" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button class="formbold-btn">Book Appointment</button>
+                                </div>
+
+                            
+                           
+
+                            </form>
+                             </div>           
+                </div>
+           </div>
+
+
+
+		</div>
+
+        
+    </div>
+	<div class="Right- align" style="height:300px;width:auto">
+		<img src="~/css/LOGO.PNG" alt="Cinque Terre" class="img-fluid" style="height:110%;width:400px; img-align" />
+	</div>
+</div>
+    </div>
+@*<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <div>
+  <i class='bx bxs-user'>My Profile</i>
+  </div>
+  <br/>
+
+  <i class='bx bx-book-add'>Bookings</i>
+  <br />
+  <br />
+  <i class='bx bx-info-circle'>About Us</i>
+  <br />
+  <br />
+  <i class='bx bxs-first-aid'>Emergency</i>
+  <br />
+  <br />
+  <i class='bx bxs-contact'>Contact</i>
+    
+     
+
+</div>*@
+	
+
+
+@*<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Menu</button>  
+ 
+</div>
+*@
+@*<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>*@
+   
+</body>
+</html>                                                                                                                                                                                                                                 
+
+
+
+
+

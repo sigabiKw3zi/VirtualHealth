@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - VirtualHealth</title>
+   @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true"/>*@
+   @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+
+   @* <link rel="stylesheet" href="~/CombinedWebsite.styles.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true"/>
+	<link rel="stylesheet" href="~/css/font-awesome.css" asp-append-version="true"/>
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+	<!-- Scripts -->
+			<script src="~/js/jquery.min.js"></script>
+			<script src="~/js/browser.min.js"></script>
+			<script src="~/js/breakpoints.min.js"></script>
+			<script src="~/js/util.js"></script>
+			<script src="~/js/main.js"></script>
+	<a href="~/fa-brands-400.eot" ></a>
+	<a href="~/fa-brands-400.svg" ></a>
+	<a href="~/fa-brands-400.ttf" ></a>
+	<a href="~/fa-brands-400.woff" ></a>
+	<a href="~/fa-brands-400.woff2" ></a>
+	<a href="~/fa-regular-400.eot" ></a>
+	<a href="~/fa-regular-400.svg" ></a>
+	<a href="~/fa-regular-400.ttf" ></a>
+	<a href="~/fa-regular-400.woff" ></a>
+	<a href="~/fa-regular-400.woff2" ></a>
+	<a href="~/fa-solid-900.eot"></a>
+	<a href="~/fa-solid-900.svg" ></a>
+	<a href="~/fa-solid-900.ttf" ></a>
+	<a href="~/fa-solid-900.woff" ></a>
+	<a href="~/fa-solid-900.woff2" ></a>
+</head>
+<body class="is-preload">
+
+							<!-- Header -->		
+							<nav class="navbar navbar-default ">
+
+								<header id="header">
+
+			<h2 class="text-dark"><img src="~/logo1.jpg.jpg" height="100" width="150" class="logo" />@Html.ActionLink("VIRTUAL HEALTHBRIDGE", "Index", "Home", new { @class = "nav-link" })</h2>
+
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-google"><span class="label">Google</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										
+									</ul>
+									@*<partial name="_LoginPartial"/>*@
+									
+									
+								</header>
+							</nav>
+
+    @*<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header" class="nav-item">
+									<a href="~/Views/Home/index.cshtml" class="logo"><strong>Virtual</strong> Health Bridge</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										@*<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>*@
+										@*<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>*@
+										@*<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>*@
+									@*</ul>
+								</header>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li>@Html.ActionLink("Home Page", "index", "Home", new { @class = "nav-link" })</li>
+										<li>@Html.ActionLink("About Us", "about", "Home", new { @class = "nav-link" })</li>
+										<li>
+											<span class="opener">SubMenu</span>
+											<ul>
+												<li>@Html.ActionLink("Services", "services", "Home", new { @class = "nav-link" })</li>
+												<li>@Html.ActionLink("Gallery", "gallery", "Home", new { @class = "nav-link" })</li>
+											</ul>
+										</li>
+										<li>@Html.ActionLink("Contact", "contact", "Home", new { @class = "nav-link" })</li>
+									</ul>
+								</nav>*@
+
+							
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+<!-- Footer -->
+								<!-- Sidebar -->
+					<div>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright"> &copy; 2023 - VitualHealthApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+								</footer>
+			</div>
+
+		<!-- Scripts -->
+			@*<script src="~/js/jquery.min.js"></script>
+			<script src="~/js/browser.min.js"></script>
+			<script src="~/js/breakpoints.min.js"></script>
+			<script src="~/js/util.js"></script>
+			<script src="~/js/main.js"></script>*@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

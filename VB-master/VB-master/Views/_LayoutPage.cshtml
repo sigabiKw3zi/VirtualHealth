@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - VirtualHealth</title>
+   
+	<link href="~/css/bootstrap.css" type="text/css" media="all" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/chocolat.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/flexslider.css" type="text/css" media="screen" property="" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/font-awesome.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/JiSlider.css" asp-append-version="true" rel="stylesheet" />
+    <link href="~/css/style.css" type="text/css" media="all" asp-append-version="true" rel="stylesheet" />
+    <script src="~/js/bootstrap.js" asp-append-version="true"></script>
+    <script src="~/js/easing.js" asp-append-version="true"></script>
+    <script src="~/js/JiSlider.js" asp-append-version="true"></script>
+    <script src="~/js/jquery-2.2.3.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.chocolat.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.countup.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.flexslider.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.waypoints.min.js" asp-append-version="true"></script>
+    <script src="~/js/move-top.js" asp-append-version="true"></script>
+    <script src="~/js/SmoothScroll.min.js" asp-append-version="true"></script>
+
+	<a href="~/css/fa-brands-400.woff" ></a>
+	<a href="~/css/fa-brands-400.woff2"></a>
+	<a href="~/css/fa-regular-400.eot" ></a>
+	<a href="~/css/fa-regular-400.ttf" ></a>
+	<a href="~/css/fa-regular-400.woff" ></a>
+	<a href="~//css/fa-solid-900.eot" ></a>
+	<a href="~/css/fa-regular-400.woff2" ></a>
+	<a href="~/css/fa-solid-900.ttf" ></a>
+	<a href="~/css/fa-solid-900.woff" ></a>
+	<a href="~/css/fa-solid-900.woff2" ></a>
+
+	<a href="~/fa-brands-400.eot" ></a>
+	<a href="~/fa-brands-400.svg" ></a>
+	<a href="~/fa-brands-400.ttf" ></a>
+	<a href="~/fa-brands-400.woff" ></a>
+	<a href="~/fa-brands-400.woff2" ></a>
+	<a href="~/fa-regular-400.eot" ></a>
+	<a href="~/fa-regular-400.svg" ></a>
+	<a href="~/fa-regular-400.ttf" ></a>
+	<a href="~/fa-regular-400.woff" ></a>
+	<a href="~/fa-regular-400.woff2" ></a>
+	<a href="~/fa-solid-900.eot"></a>
+	<a href="~/fa-solid-900.svg" ></a>
+	<a href="~/fa-solid-900.ttf" ></a>
+	<a href="~/fa-solid-900.woff" ></a>
+	<a href="~/fa-solid-900.woff2" ></a>
+	<link rel="stylesheet" href="~/css/main.css" asp-append-version="true"/>
+
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+@*	<!-- Scripts -->
+			<script src="~/js/jquery.min.js"></script>
+			<script src="~/js/browser.min.js"></script>
+			<script src="~/js/breakpoints.min.js"></script>
+			<script src="~/js/util.js"></script>
+			<script src="~/js/main.js"></script>*@
+</head>
+<body class="is-preload">
+
+							@*<!-- Header -->	
+							<header>
+							<nav class="navbar navbar-expand-md navbar-light bg-gradient-secondary">
+								
+									
+									<h2 class="text-dark">@Html.ActionLink("VIRTUAL HEALTH BRIDGE", "Index", "Home", new { @class = "nav-link" })</h2>
+									<div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-lg-auto text-center">
+                            
+                            <li class="nav-item mr-3">
+                                @Html.ActionLink("About", "About", "Home", new { @class = "nav-link" })
+
+                                <span class="sr-only">(current)</span>
+
+                            </li>
+                            <li class="nav-item dropdown mr-3">
+                                <a class="nav-link dropdown-toggle" href="#dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Doctor
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li class="nav-item  mr-3">
+                                           @Html.ActionLink("Dashboard", "Index", "Doctor", new { @class = "nav-link" })
+                                        </li>
+                                        <li class="nav-item  mr-3">
+                                            @Html.ActionLink("Referral", "Referral","Staff",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Schedule", "Index","Doctor",new{@class = "nav-link" })
+                                        </li>
+                                        <li class="nav-item  mr-3">
+                                           @Html.ActionLink("Sick Leave", "Index", "Doctor", new { @class = "nav-link" })
+                                        </li>
+                                        <li class="nav-item  mr-3">
+                                            @Html.ActionLink("Members", "Index","Doctor",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Schedule", "Index","Doctor",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Tasks", "Index","Doctor",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Settings", "Index","Doctor",new{@class = "nav-link" })
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                             <li class="nav-item dropdown mr-3">
+                                <a class="nav-link dropdown-toggle" href="#dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Insurance
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li class="nav-item  mr-3">
+                                           @Html.ActionLink("Health Insurance", "Insurance", "Staff", new { @class = "nav-link" })
+                                        </li>
+                                        <li class="nav-item  mr-3">
+                                            @Html.ActionLink("Disability", "Disability","Doctor",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Long-term Care", "Care","Doctor",new{@class = "nav-link" })
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown mr-3">
+                                <a class="nav-link dropdown-toggle" href="#dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Diagnosis
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li class="nav-item  mr-3">
+                                           @Html.ActionLink("Physical Exam Form", "Exam", "Doctor", new { @class = "nav-link" })
+                                        </li>
+                                        <li class="nav-item  mr-3">
+                                            @Html.ActionLink("Hospital Evaluation", "Eval","Doctor",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("First-Aid Form", "Aid","Doctor",new{@class = "nav-link" })
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                             <li class="nav-item dropdown mr-3">
+                                <a class="nav-link dropdown-toggle" href="#dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Tracking
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li class="nav-item  mr-3">
+                                           @Html.ActionLink("Mental Health Track", "Mental", "Doctor", new { @class = "nav-link" })
+                                        </li>
+                                        <li class="nav-item  mr-3">
+                                            @Html.ActionLink("Blood Pressure", "Tracking","Staff",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Cholestrol", "Chol","Doctor",new{@class = "nav-link" })
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown mr-3">
+                                <a class="nav-link dropdown-toggle" href="#dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Admin
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li class="nav-item  mr-3">
+                                           @Html.ActionLink("Dashboard", "Index","Staff",new{@class = "nav-link" })
+                                        </li>
+                                        <li class="nav-item  mr-3">
+                                            @Html.ActionLink("Accounts", "Index", "VirtualAccount", new { @class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Roles", "Index","AppRole",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Management", "Index","Staff",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Reports", "Index","Staff",new{@class = "nav-link" })
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+							<li class="nav-item dropdown mr-3">
+                                <a class="nav-link dropdown-toggle" href="#dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Specialist
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul>
+                                        <li class="nav-item  mr-3">
+                                           @Html.ActionLink("Dashboard", "Index", "Specialist", new { @class = "nav-link" })
+                                        </li>
+                                        <li class="nav-item  mr-3">
+                                            @Html.ActionLink("Members", "Index","Specialist",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Chat", "Index","Specialist",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Tasks", "Index","Specialist",new{@class = "nav-link" })
+                                        </li>
+										<li class="nav-item  mr-3">
+                                            @Html.ActionLink("Settings", "Index","Specialist",new{@class = "nav-link" })
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                            <li class="nav-item active mr-3">
+                                @Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-link" })
+                            </li>
+                            <li><partial name="_LoginPartial"/></li>
+                        </ul>
+                    </div>
+								
+									
+							</nav>
+							</header>*@
+                            <nav>
+								<header id="header">
+									
+									
+            <h2 class="text-dark"><img src="~/logo1.jpg.jpg" height="100" width="150" class="logo" />@Html.ActionLink("VIRTUAL HEALTHBRIDGE", "Index", "Home", new { @class = "nav-link" })</h2>
+
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-google"><span class="label">Google</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										
+									</ul>
+									@*<partial name="_LoginPartial"/>*@
+									
+									
+								</header>
+							</nav>
+							
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+					<div>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright"> &copy; 2023 - VitualHealthApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>.</p>
+								</footer>
+			</div>
+
+		<!-- Scripts -->
+			@*<script src="~/js/jquery.min.js"></script>
+			<script src="~/js/browser.min.js"></script>
+			<script src="~/js/breakpoints.min.js"></script>
+			<script src="~/js/util.js"></script>
+			<script src="~/js/main.js"></script>*@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,168 @@
+﻿@{
+    ViewData["Title"] = "Pharmacist Portal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Add styles for dropdowns and their content */
+    .dropdown {
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+        .dropdown select,
+        .dropdown .content {
+            border: none;
+            background-color: white;
+            padding: 0;
+            margin: 0;
+        }
+
+    /* Style for collection form */
+    .collection-form {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+        .collection-form label {
+            margin-right: 10px;
+        }
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pharmacist Portal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!-- Add any additional styles if needed -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="underlined-heading">Pharmacist Portal</h1>
+        </header>
+
+        <div class="content">
+            <h2>Prescriptions</h2>
+            <div class="dropdown">
+                <select id="prescriptionDropdown">
+                    <option value="0">Select a prescription</option>
+                    <option value="1">Prescription 1</option>
+                    <option value="2">Prescription 2</option>
+                    <!-- ... -->
+                </select>
+            </div>
+        </div>
+
+        <div id="prescriptionDetails" class="content" style="display: none;">
+            <h2>Prescription Details</h2>
+            <div id="patientInfo">
+                <h3>Patient Information</h3>
+                <p>Name: Anathi Dukuza</p>
+                <p>DOB: 1990-01-01</p>
+                <p>Gender: Male</p>
+                <!-- ... -->
+            </div>
+            <div id="medicationInfo">
+                <h3>Medication Details</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Medication Name</th>
+                            <th>Description</th>
+                            <th>Dosage Instructions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Oratane 40gm</td>
+                            <td>Reduces acne</td>
+                            <td>Take 1 tablet before breakfast for 30 days</td>
+                        </tr>
+                        <tr>
+                            <td>Panado</td>
+                            <td>Helps with pain relief</td>
+                            <td>Take 2 tablets a day </td>
+                        </tr>
+                        <!-- ... -->
+                    </tbody>
+                </table>
+                <div id="collectionInfo" class="collection-form">
+                    <h3>Collection Date</h3>
+                </div>
+                <div>
+                    <input type="date" id="collectionDate">
+                </div>
+                <div>
+                    <br />
+                    <button id="collectButton"> Notify patient for collection</button> 
+                    <br />
+                    <br />
+                    <br /> 
+               </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Track Medications</h2>
+            <div class="dropdown">
+                <select id="medicationStatusDropdown">
+                    <option value="collected">Collected Medications</option>
+                    <option value="uncollected">Uncollected Medications</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="collectedMedications" class="content" style="display: none;">
+            <!-- ... Collected Medications ... -->
+        </div>
+
+        <div id="uncollectedMedications" class="content" style="display: none;">
+            <!-- ... Uncollected Medications ... -->
+        </div>
+    </div>
+
+    <ul class="actions">
+        <li><a href="#" class="button big">Log Out</a></li>
+
+    <script>
+
+        const prescriptionDropdown = document.getElementById('prescriptionDropdown');
+        const prescriptionDetails = document.getElementById('prescriptionDetails');
+        const medicationStatusDropdown = document.getElementById('medicationStatusDropdown');
+        const collectedMedications = document.getElementById('collectedMedications');
+        const uncollectedMedications = document.getElementById('uncollectedMedications');
+
+        prescriptionDropdown.addEventListener('change', (event) => {
+            const selectedPrescription = event.target.value;
+            if (selectedPrescription !== '0') {
+                prescriptionDetails.style.display = 'block';
+            } else {
+                prescriptionDetails.style.display = 'none';
+            }
+        });
+
+        medicationStatusDropdown.addEventListener('change', (event) => {
+            const selectedStatus = event.target.value;
+            collectedMedications.style.display = selectedStatus === 'collected' ? 'block' : 'none';
+            uncollectedMedications.style.display = selectedStatus === 'uncollected' ? 'block' : 'none';
+        });
+
+    </script>
+    </ul>
+</body>
+</html>
+
+   
+
+
+
+
+
+

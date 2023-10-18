@@ -1,0 +1,282 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IdentityRole
+@inject UserManager<IdentityUser> userManager
+@inject SignInManager<IdentityUser> signInManager
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h2>
+                Welcome to <br />Virtual Health Bridge
+
+            </h2>
+											<h3>
+											by FIFTH ELEMENT</h3>
+											<p>Connecting Health, Bridging Lives.</p>
+										</header>
+										<p>Our purpose is making life better. We’re able to fulfill our purpose – and work towards our vision – because we’re backed by four strategic pillars (growth, efficiency, quality, sustainability), a sustainable business model, and a powerful mission.</p>
+										<ul class="actions">
+											<li><a href="#" class="button big">Learn More</a></li>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="~/Custom EMR and EHR Software Development.png" />
+									</span>
+								</section>
+
+			<!-- Section -->
+			<section>
+				<header class="major">
+					<h2>HEALTHCARE SERVICES</h2>
+				</header>
+				<div class="posts">
+					<article>
+						<a href="#" class="image"><img src="~/images/Counceling.jpeg" alt="" /></a>
+						<h3>Counselling</h3>
+						<p>Your mental wellbeing matters- anxiety, depression, stress. Find a safe place to open up. Start a supportive, confidential, and healing conversation.</p>
+						<ul class="actions">
+							<li><button>@Html.ActionLink("More", "FrontBar", "Booking", new { @class = "nav-link" })</button></li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="~/images/FamilyPlaning.jpeg" alt="" /></a>
+						<h3>Contraception</h3>
+						<p>Our family planning services include education, counselling and contraception/ birth control options to help you decide when or if you want to have children.</p>
+						<ul class="actions">
+							<li><a href="#" class="button">More</a></li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="~/images/PrenatalCare.jpeg" alt="" /></a>
+						<h3>Pre-Natal Care</h3>
+						<p>Medical and nursing women during pregnancy stages. the aim is to foresee any potential problems as early as possible. Provided free at public health clinics.</p>
+						<ul class="actions">
+							<li><button>@Html.ActionLink("More", "Privacy", "Home", new { @class = "nav-link" })</button></li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="~/images/ChronicMed.jpeg" alt="" /></a>
+						<h3>Chronic Health Care</h3>
+						<p>Besides early diagnosis,management and harm reduction, the service aims to prevent illness and promote healthy behaviour.</p>
+						<ul class="actions">
+							<li><a href="" class="button">More</a></li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="~/images/Referrals.jpeg" alt="" /></a>
+						<h3>Referral</h3>
+						<p>Rest assured that you shall get the service and help that you need. Should you feel unsatisfied by our internal doctors, they shall refer you to a specialist of your interest should you deem so.</p>
+						<ul class="actions">
+							<li><a href="#" class="button">More</a></li>
+						</ul>
+					</article>
+					<article>
+						<a href="#" class="image"><img src="~/pic06.jpg" alt="" /></a>
+						<h3>Emergency</h3>
+						<p>Acutely ill and injured people seek care every day. Our frontline providers will help manage any medical, surgical, and obstetric emergencies, including injuries and infections, heart attacks and strokes, asthma and acute complications of pregnancy.</p>
+						<ul class="actions">
+							<li><a href="#" class="button">More</a></li>
+						</ul>
+					</article>
+				</div>
+			</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>OUR VISION</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon fa-gem"></span>
+											<div class="content">
+												<h3>Operational Growth Across Geographies</h3>
+												<p>The Virtual Health Bridge group has had strong results for the six months it has been running. It has also produced excellent operational performance in both acute and non-acute businesses- growing group revenue by 12.9% to R15.3 billion and operating profit by 13.5% to R2.7 billion.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-procedures"></span>
+											<div class="content">
+												<h3>Nuclear Medicine Operations</h3>
+												<p>Our group continues its' South African diversitification strategy with the acquisition of TheraMed Nuclear's non-clinical imaging operations in Gauteng.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-clinic-medical"></span>
+											<div class="content">
+												<h3>Dialysis Procedure</h3>
+												<p>We are pleased to announce that we have been entrusted by Fresenius Medical Care to take over 51 of its renal dialysis clinics to support their patients in Africa..</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-people-arrows"></span>
+											<div class="content">
+												<h3>Training Programme</h3>
+												<p>The best and brightest minds are welcome to join our team- praticularly in the fields of nursing, clinical engineering and pharmacy. This is a chance for you to fulfill your potential.</p>
+											</div>
+										</article>
+									</div>
+								</section>	
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        
+                    </form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+
+									<ul>
+										
+										<li>@Html.ActionLink("Home Page", "Index", "Home", new { @class = "nav-link" })</li>
+										
+					@if (signInManager.IsSignedIn(User))
+					{
+						
+						<li>@Html.ActionLink("About Us", "About", "Home", new { @class = "nav-link" })</li>	
+					<li>@Html.ActionLink("Staff", "Index","Staff",new{@class = "nav-link" })</li>
+					
+						<li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-link" })</li>
+						@if(User.IsInRole("Doctor")){
+							<li>@Html.ActionLink("Documents", "ThirdView", "Third", new { @class = "nav-link" })</li>
+							<li><partial name="_LoginPartial"/></li>
+						}
+						@if (User.IsInRole("Patient"))
+						{
+						
+							<li>
+								<span class="opener">Patient Information</span>
+								<ul>
+									<li>@Html.ActionLink("My Profile", "Index", "Profile", new { @class = "nav-link" })</li>
+									<li>@Html.ActionLink("Medical Record", "Record", "AppRole", new { @class = "nav-link" })</li>
+									<li>@Html.ActionLink("Upcoming Appointment", "Appointment", "AppRole", new { @class = "nav-link" })</li>
+								</ul>
+							</li>
+							<li>
+                            <span class="opener">Healthcare Services</span>
+                            <ul>
+                                
+                                <li>@Html.ActionLink("Chronic Medication", "ChronicMed", "Home", new { @class = "nav-link" })</li>
+                                <li>@Html.ActionLink("Family Planning", "FamilyPlanning", "Home", new { @class = "nav-link" })</li>
+                                <li>@Html.ActionLink("Counselling", "Create", "Booking", new { @class = "nav-link" })</li>
+                                <li>@Html.ActionLink("Referral", "Index", "Staff", new { @class = "nav-link" })</li>
+                                <li>@Html.ActionLink("Pre-Natal Care", "Index", "Second", new { @class = "nav-link" })</li>
+                            </ul>
+                        </li>
+							
+							<li>
+								<span class="opener">Medication Order</span>
+								<ul>
+									<li>@Html.ActionLink("Home Delivery", "Delivery", "Profile", new { @class = "nav-link" })</li>
+									<li>@Html.ActionLink("Pharmacy Order", "Pharm", "Profile", new { @class = "nav-link" })</li>
+									<li>@Html.ActionLink("Covid-19 Vaccine Pre-Registration", "Vaccine", "Profile", new { @class = "nav-link" })</li>
+								</ul>
+							</li>
+							@*<li>
+							<span class="opener">Insurance</span>
+							<ul>
+								<li>@Html.ActionLink("Health Insurance", "Insurance", "Staff", new { @class = "nav-link" })</li>
+								<li>@Html.ActionLink("Disability", "Disability", "Doctor", new { @class = "nav-link" })</li>
+								<li>@Html.ActionLink("Long-term Care", "Care", "Doctor", new { @class = "nav-link" })</li>
+							</ul>
+						</li>*@
+							<li>
+								<span class="opener">Health Check</span>
+								<ul>
+									<li>@Html.ActionLink("Mental Health Survey", "Delivery", "Profile", new { @class = "nav-link" })</li>
+									<li>@Html.ActionLink("Blood Pressure", "Tracking", "Staff", new { @class = "nav-link" })</li>
+									<li>@Html.ActionLink("Covid-19 Screening", "Screening", "Profile", new { @class = "nav-link" })</li>
+								</ul>
+							</li>
+							<li>
+								<span class="opener">Sub Menu</span>
+								<ul>
+									<li>@Html.ActionLink("Our Services", "Services", "Home", new { @class = "nav-link" })</li>
+									<li>@Html.ActionLink("Social Gallery", "Gallery", "Home", new { @class = "nav-link" })</li>
+
+								</ul>
+							</li>
+							<li>@Html.ActionLink("Payment", "Payment", "Staff", new { @class = "nav-link" })</li>
+							<partial name="_LoginPartial"/> 
+						}
+						@if (User.IsInRole("Admin"))
+						{
+							
+							<li>@Html.ActionLink("Accounts", "Index", "VirtualAccount", new { @class = "nav-link" })</li>
+						<li>@Html.ActionLink("Roles", "Index","AppRole",new{@class = "nav-link" })</li>	
+						<li>@Html.ActionLink("People", "FourthView", "Four", new { @class = "nav-link" })</li>
+						<partial name="_LoginPartial"/>
+						}		
+					}
+					@if (!signInManager.IsSignedIn(User))
+				{
+					<li>@Html.ActionLink("About Us", "About", "Home", new { @class = "nav-link" })</li>	
+					
+					<li>@Html.ActionLink("Careers", "Careers", "AppRole", new { @class = "nav-link" })</li>
+						<li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-link" })</li>
+						<li>
+							<span class="opener">New User</span>
+							<ul>
+								<li><partial name="_LoginPartial"/></li>
+							</ul>
+						</li>
+				}
+				</ul>
+				
+				
+
+								</nav>
+	
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Our landline is open 24/7.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">virtualhealth@info.org.za</a></li>
+										<li class="icon solid fa-phone">(041) 504-1111</li>
+										<li class="icon solid fa-home">Nelson Mandela University, University Way,<br />
+                            Summerstrand, Gqeberha, 6019</li>
+									</ul>
+								</section>
+
+							
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="~/js/jquery.min.js"></script>
+			<script src="~/js/browser.min.js"></script>
+			<script src="~/js/breakpoints.min.js"></script>
+			<script src="~/js/util.js"></script>
+			<script src="~/js/main.js"></script>

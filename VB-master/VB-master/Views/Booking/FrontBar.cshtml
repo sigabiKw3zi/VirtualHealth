@@ -1,0 +1,175 @@
+﻿@{
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+@*<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="~/css/Dashboard.css" />
+	<title>Counseling Hospital Dashboard</title>
+	
+</head>
+<body>
+	@*<header>
+		<p>In this system these are Ciuncilling types we offer<br>You can Chose thye one yiu need our service from.  </p>
+		@*/*<iframe src="~/index.html" width="100%" height="400px"></iframe>*/*@
+@*		<img src="~/css/asian-young-woman-patient-receiving-bad-news-woman-patient-is-desperate-and-crying-her-mother-support-and-comforting-her-patient-with-sympathy-MJ93JK.jpg" width="100%" height="400px"/>
+		*@		@*<img src="~/css/Icons/matheus-ferrero-yfmjALh1S6s-unsplash.jpg " width="100%" height="400px" />*@
+	
+	
+	
+	
+
+	
+
+	@*<ul>
+		<li class="Icon-list">
+			<a asp-controller="Booking" asp-action="Create">
+				<div class="healthcare">
+					<img src="~/css/Icons/Dermatologist.svg" alt="" class="ico">
+
+				</div>
+			</a>
+			<p data-v-21991e7a="">Book Appointment</p>
+		</li>
+
+		<li class="Icon-list">
+			<a asp-controller="Booking" asp-action="">
+				<div class="healthcare">
+					<img src="~/css/icons8-booking-58.png" alt="" class="ico">
+
+				</div>
+			</a>
+			<p data-v-21991e7a="">Review Booked Appointments</p>
+		</li>
+
+		<li class="Icon-list">
+			<a asp-controller="Booking" asp-action="CalenderC">
+				<div class="healthcare">
+					<img src="~/css/Icons/Dermatologist.svg" alt="" class="ico">
+
+				</div>
+			</a>
+			<p data-v-21991e7a=""></p>
+		</li>
+	</ul>*@
+
+
+	
+	@*<div>
+	@RenderBody()
+	</div>*@
+@*</body>
+</html>
+*@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Counseling  Dashboard</title>
+	<link rel="stylesheet" type="~/text/css" href="~/css/Fronti.css">
+	<link rel="stylesheet" href="~/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+	@*<div class="navbar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Doctors</a></li>
+			<li><a href="#">Appointments</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</div>*@
+	
+	<div class="form">
+		<form class="search-form" method="get" action="">
+			<input type="text" id="search-query" placeholder="Search...">
+			<button type="submit">Search</button>
+		</form>
+	</div>
+	<div class="dashboard">
+		<header>
+			<div id="header">
+				
+				<div class="navbar">
+					<ul>
+						@*<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>*@
+						<li><a href="#" >Services</a></li>
+						@*<li><a href="#">Doctors</a></li>
+						<li><a href="#">Appointments</a></li>
+						<li><a href="#">Contact Us</a></li>*@
+					</ul>
+				</div>
+				<div class="dashboard">
+			</div>
+			<h1>Welcome to Virtual Health Counselling</h1><br>
+			
+			@*<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script>
+				$(document).ready(function () {
+					$('#search-form').submit(function (e) {
+						e.preventDefault();
+
+						var query = $('#search-query').val();
+						var results = searchInContent(query);
+
+						displaySearchResults(results);
+					});
+
+					function searchInContent(query) {
+						var content = $("body").html(); // Get all content within the body
+
+						// Implement your search logic here
+						// This example performs a simple case-insensitive search
+						return content.toLowerCase().includes(query.toLowerCase());
+					}
+
+					function displaySearchResults(found) {
+						var resultsContainer = $('#search-results');
+						resultsContainer.empty();
+
+						if (found) {
+							resultsContainer.append('<p>Search term found in the content.</p>');
+						} else {
+							resultsContainer.append('<p>Search term not found.</p>');
+						}
+					}
+				});
+			</script>*@
+			</div>
+		</header>
+
+		<nav>
+			<ul>
+				<li><a asp-controller="Booking" asp-action="FrontBar"><i class="fas fa-home"></i> Home</a></li>
+				<li><a asp-controller="Booking" asp-action="Create"><i class="fas fa-calendar-alt"></i> Create Appointment</a></li>
+				<li><a asp-controller="Booking" asp-action="Index"><i class="fas fa-users"></i> Patient Bookings</a></li>
+				<li><a href="#"><i class="fas fa-chart-bar"></i> Reports/FeedBack</a></li>
+			</ul>
+		</nav>
+		<main>
+			<p1 class="Intro">At Vitual Health, we understand that life's journey can be filled with challenges, uncertainties, and moments of emotional turmoil. We are here to provide you with a safe and compassionate space where you can find solace, healing, and guidance. Our dedicated team of experienced counselors is committed to helping you navigate through the complexities of life, empowering you to discover your inner strength and resilience.</p1>
+			<br>
+		</main>
+
+		
+	</div>
+	<h1>About Us</h1>
+	<p2>At our Vitual Health, we believe that seeking counseling is a courageous step towards personal growth and well-being. Our center is founded on the principles of empathy, respect, and understanding. With a deep commitment to ethical practice, our counselors are licensed professionals with diverse backgrounds and specializations, allowing us to provide a comprehensive range of counseling services tailored to your unique needs.</p2>
+	<h2>Your Path to Wellness</h2>
+	<p3>Whether you're facing challenges in your relationships, struggling with anxiety or depression, or seeking personal development, we offer a wide range of counseling services designed to support you on your journey. Our compassionate counselors utilize evidence-based therapeutic approaches to guide you towards healing and transformation.</p3>
+	<h3>Why Choose Tranquil Haven?</h3>
+	<p4>
+		Expertise: Our counselors are skilled professionals with years of experience in various areas of counseling.<br>
+		Personalized Approach: We recognize that every individual's story is unique. Our counseling sessions are tailored to your specific needs and goals.<br>
+		Confidentiality: Your privacy is of utmost importance to us. Our counseling sessions are conducted in a secure and confidential environment.<br>
+		Compassion: We provide a non-judgmental and empathetic space where you can freely express yourself and be heard.<br>
+	</p4>
+</body>
+</html>
+
